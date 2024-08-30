@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+
+        var x = prompt('Informe um valor numérico');
+        x = parseFloat(x);
+
+        var y = prompt('Informe outro valor numérico');
+        y = parseFloat(y);
+        
+        var z = prompt('Informe mais um valor numérico');
+        z = parseFloat(z);
+
+        if( x > y && x > z){
+            document.write(x + ' É o maior número');
+        }
+        else if( y > x && y > z){
+            document.write(y + ' É o maior número');
+        }
+        else{
+            document.write(z + ' É o maior número');   
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

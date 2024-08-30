@@ -95,10 +95,12 @@
         //Círculo
         var Pi = 3.14;
 
-        var RaioCirculo = prompt('Informe o valor do Ráio do Circulo:')
-        parseInt(Pi);
+        var RaioCirculo = prompt('Informe o valor do Ráio do Circulo:');
+        RaioCirculo = parseFloat(RaioCirculo);
 
-        //continuar
+        var AreaCirculo = Pi * (RaioCirculo **2);
+        alert('A área do Circulo é: ' + AreaCirculo);
+
     </script>
 </head>
 <body>

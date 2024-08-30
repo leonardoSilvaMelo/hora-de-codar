@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+
+        var x = prompt('Informe um valor numérico');
+        x = parseFloat(x);
+
+        var y = prompt('Informe outro valor numérico');
+        y = parseFloat(y);
+        
+        var z = prompt('Informe mais um valor numérico');
+        z = parseFloat(z);
+
+        var resultado;
+
+        // if(( x > y && x > z) || ( y > x && y > z) || ( z > x && z > y)){
+
+        // }
+
+        if(( x > y && x > z) && ( y > z )){
+            alert('A soma dos dois maiores números são: ' + (x+y));
+        }
+        //continuará...
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
