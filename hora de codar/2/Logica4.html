@@ -7,7 +7,8 @@
 
     <script>
 
-        //Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+        //Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais)
+        // e escrever a soma dos 2 maiores.
 
         var x = prompt('Informe um valor numérico');
         x = parseFloat(x);
@@ -20,14 +21,13 @@
 
         var resultado;
 
-        // if(( x > y && x > z) || ( y > x && y > z) || ( z > x && z > y)){
-
-        // }
-
         if(( x > y && x > z) && ( y > z )){
             alert('A soma dos dois maiores números são: ' + (x+y));
+        }else if(( x > y && x > z) && ( z > y)){
+            alert('A soma dos dois maiores números são: ' + (x+z));
+        }else{
+            alert('A soma dos dois maiores números são: ' + (z+y));
         }
-        //continuará...
     </script>
 </head>
 <body>
