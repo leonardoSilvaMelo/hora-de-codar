@@ -6,28 +6,22 @@
     <title>Document</title>
 
     <script>
+        //document.getElementById("demo").innerHTML = text;
+
+
         //5.  Faça um programa que leia 6 valores informados pelo usuário, calcule, 
         //exiba os números informados e escreva a média aritmética desses valores lidos.
 
-        var a = prompt('1.Informe um valor numérico');
-        a = parseFloat(a);
+        let numeros = []; //Criando um Array vazio, que irá receber os números
 
-        var b = prompt('2.Informe outro valor numérico');
-        b = parseFloat(b);
-        
-        var c = prompt('3.Informe mais um valor numérico');
-        c = parseFloat(c);
+        for( let i = 0; i < 6; i++){
+            let valor = parseFloat(prompt("Digite o valor " + (i + 1) + ":"));
+            numeros.push(valor); // Adicionando um valor no Array números com o "PUSH"
+        }
 
-        var d = prompt('4.Informe um valor numérico');
-        d = parseFloat(d);
+        alert("Os números informados são: " + numeros.join(", ")); //Aqui, estamos exibindo um alerta na tela informando os números. Também estamos adicionando uma virgula entre os elementos do Array com o Join.
 
-        var e = prompt('5.Informe outro valor numérico');
-        e = parseFloat(e);
-        
-        var f = prompt('6.Informe mais um valor numérico');
-        f = parseFloat(f);
-
-        var numeros = [a,b,c,d,e,f]
+        //Calcula a soma dos números
     </script>
 </head>
 <body>
