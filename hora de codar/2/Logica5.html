@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <script>
-        //document.getElementById("demo").innerHTML = text;
+        //Essa parte da atividade criada com ajuda de uma IA
 
 
         //5.  Faça um programa que leia 6 valores informados pelo usuário, calcule, 
@@ -21,7 +21,16 @@
 
         alert("Os números informados são: " + numeros.join(", ")); //Aqui, estamos exibindo um alerta na tela informando os números. Também estamos adicionando uma virgula entre os elementos do Array com o Join.
 
-        //Calcula a soma dos números
+        //Calcular a soma dos números
+        let soma = 0;
+
+        //O loop percorre o array numeros
+        for( let i = 0; i< numeros.length; i++){ // A variável i é o índice (posição) do número atual no array.
+            soma += numeros[i]; //adicionando o valor atual do array (no índice i) à variável soma.
+        }
+
+        let media = soma / numeros.length;
+        alert("A média aritmética é: " + media);
     </script>
 </head>
 <body>
