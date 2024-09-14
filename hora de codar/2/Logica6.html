@@ -22,7 +22,33 @@
 
         alert("O último número é: " + numeros.at(3));
 
-        for( let i = 0; i)
+        //Feito da forma burra e manual
+
+        if( (numeros[0] > numeros[1]) && (numeros[0] > numeros[2]) && (numeros[0] > numeros[3]) ){
+            alert("O maior número é: " + numeros[0]);
+        } else if( (numeros[1] > numeros[0]) && (numeros[1] > numeros[2]) && (numeros[1] > numeros[3])){
+            alert("O maior número é: " + numeros[1]);
+        }else if( (numeros[2] > numeros[0]) && (numeros[2] > numeros[1]) && (numeros[2] > numeros[3])){
+            alert("O maior número é: " + numeros[2]);
+        }else{
+            alert("O maior número é: " + numeros[3]);
+        }
+
+
+
+        //Ia
+        // let maiorNumero = numeros[0]; // Comece assumindo que o primeiro é o maior
+
+        // for (let i = 1; i < numeros.length; i++) {
+
+        // if (numeros[i] > maiorNumero) {
+        // maiorNumero = numeros[i]; // Atualize o maior número se o número atual for maior
+        // }
+        // }
+
+        // alert("O maior número é: " + maiorNumero);
+
+        
 
     </script>
 </body>
