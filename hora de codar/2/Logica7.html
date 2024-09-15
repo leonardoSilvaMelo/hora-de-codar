@@ -15,16 +15,21 @@
             numeros.push(valor);
         }
 
-        alert("Os números que você informou são: " + numeros);
+        alert("Os números que você informou são: " + numeros.join(", "));
 
 
         let soma = 0;
 
         for( let i = 0; i < 6; i++){
+            
             if( numeros[i] < 72){
                 soma += numeros[i];
             }
         }
+
+        alert("A soma dos números menores que 72 é: " + soma);
+
+        // orgulho de ter feito essa*
     </script>
 </head>
 <body>
