@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            background-color: rgb(29, 29, 29);
+            color: white;
+        }
+    </style>
+
+    <script>
+
+        //4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+
+        let soma = 0;
+        const quantidade = (100 - 15 + 1);
+        
+        for(i = 15; i <= 100; i++){
+            soma += i;  
+        }
+        
+        let media = soma / quantidade;
+
+        document.write("A média dos números 15 à 100 é: " + media);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
