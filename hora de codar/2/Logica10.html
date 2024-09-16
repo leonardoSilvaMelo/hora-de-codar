@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //10. Tendo como entrada a altura e o gênero designado ao nascer (codificado da seguinte forma: 1: feminino - 2: masculino - ) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas.
+
+        //Para homens: (72.7*h) - 58
+
+        //Para mulheres: (62.1*h) - 44.7
+
+        let digito = parseFloat(prompt("Digite para um dos caracteres abaixo para saber seu peso ideal:\n\n1: feminino e 2: masculino"));
+        
+        if( digito === 1){
+            let h = parseFloat(prompt("Digite sua altura: "));
+
+            if((isNaN(h)) || (h <= 0)){
+                alert("Insira uma altura válida");
+            }else{
+                const conta = (62.1 * h) - 44.7;
+
+                alert("Seu peso ideal é: " + conta + "kg");
+            }
+
+        }else if( digito === 2){
+            let h = parseFloat(prompt("Digite sua altura: "));
+
+            if( (isNaN(h)) || (h <= 0)){
+                alert("Insira uma altura válida");
+            }else{
+                const conta = (72.7*h) - 58;
+
+                alert("Seu peso ideal é: " + conta + "kg");
+            }
+            
+        }else{
+            alert("Digite 1 ou 2!");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

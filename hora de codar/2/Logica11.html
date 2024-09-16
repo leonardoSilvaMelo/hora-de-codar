@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).
+        //O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos.
+
+        let a = parseFloat(prompt("Digite um número:"));
+        let b = parseFloat(prompt("Digite outro número"));
+
+        if( (isNaN(a)) || (isNaN(b))){
+            alert("Digite um valor valido!")
+        }else{
+
+            let pergunta = parseInt(prompt("Digite para\n 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação"));
+
+        if( pergunta === 1){
+            const adicao = a + b;
+
+            alert("A soma dos dois números indicados é: " + adicao);
+        }else if( pergunta === 2){
+            const subtracao = a - b;
+
+            alert("A subtração dos dois números indicados é: " + subtracao);
+        }else if( pergunta === 3){
+            const divisao = a / b;
+
+            alert("A divisão dos dois números indicados é: " + divisao);
+        }else if( pergunta === 4){
+            const multiplicacao = a * b;
+
+            alert("A multiplicação dos dois números indicados é: " + multiplicacao);
+        }else{
+            alert("Digite um número correspondente às opções");
+        }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
