@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        //1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo. 
+
+        //O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor e exibir o resultado ao usuário.
+
+        let a = parseFloat(prompt("Informe um valor, please: "));
+        let b = parseFloat(prompt("Informe um segundo valor: "));
+
+        if((isNaN(a) || (isNaN(b)))){
+            alert("Please, digite um valor valido");
+        }
+        else{
+            if( b <= 0){
+                alert("Digite um valor que não seja igual a 0");
+
+                let b = parseFloat(prompt("Informe um segundo valor: "));
+            }
+            else{
+                const conta = a / b;
+
+                alert("A divisão dos valores indicados é: " + conta);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
