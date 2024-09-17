@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final.
+        // Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média
+        // de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve 
+        //ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+
+        let primeiraNota = parseFloat(prompt("Digite sua primeira nota: "));
+        let segundaNota = parseFloat(prompt("Digite a segunda nota: "));
+        let aprovados = 0;
+
+        let notas = primeiraNota + segundaNota;
+        const quantidade = 2;
+
+        const media = notas / quantidade;
+
+        alert("A média final entre " + primeiraNota + " e " + segundaNota + " é: " + media);
+
+        let pergunta = prompt("Calcular a média de outro aluno? Digite S/N");
+
+        
+        let continuar = true;
+        while(continuar){
+            
+            let primeiraNota = parseFloat(prompt("Digite sua primeira nota: "));
+            let segundaNota = parseFloat(prompt("Digite a segunda nota: "));
+
+            const media = notas / quantidade;
+
+            alert("A média final entre " + primeiraNota + " e " + segundaNota + " é: " + media);
+
+            if( media >= 9.5){}
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
