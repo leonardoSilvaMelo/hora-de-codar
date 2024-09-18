@@ -12,32 +12,44 @@
         // de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve 
         //ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
 
-        let primeiraNota = parseFloat(prompt("Digite sua primeira nota: "));
-        let segundaNota = parseFloat(prompt("Digite a segunda nota: "));
+        // let primeiraNota = parseFloat(prompt("Digite sua primeira nota: "));
+        // let segundaNota = parseFloat(prompt("Digite a segunda nota: "));
         let aprovados = 0;
 
-        let notas = primeiraNota + segundaNota;
-        const quantidade = 2;
-
-        const media = notas / quantidade;
-
-        alert("A média final entre " + primeiraNota + " e " + segundaNota + " é: " + media);
-
-        let pergunta = prompt("Calcular a média de outro aluno? Digite S/N");
-
         
+
+        // const media = ( primeiraNota + segundaNota) / 2;
+        // //////////////////////////////////////////
+
+        // alert("A média final é: " + media);
+        // if( media >= 9.5){
+        //     aprovados++;
+        // }
+
+        // let pergunta = prompt("Calcular a média de outro aluno? Digite S/N").toUpperCase();
+ 
         let continuar = true;
         while(continuar){
             
             let primeiraNota = parseFloat(prompt("Digite sua primeira nota: "));
             let segundaNota = parseFloat(prompt("Digite a segunda nota: "));
 
-            const media = notas / quantidade;
+            const media = ( primeiraNota + segundaNota) / 2;
 
-            alert("A média final entre " + primeiraNota + " e " + segundaNota + " é: " + media);
+            alert("A média final é: " + media);
 
-            if( media >= 9.5){}
+            if( media >= 9.5){
+                aprovados++;
+            }
+
+            let pergunta = prompt("Calcular a média de outro aluno? Digite S/N").toUpperCase();
+
+            if( pergunta === 'N'){
+                continuar = false;
+            }
         }
+
+        alert("O total de alunos aprovados é: " + aprovados);
     </script>
 </head>
 <body>
