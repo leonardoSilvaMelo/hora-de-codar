@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+
+        let numeroInformado = parseInt(prompt("Digite algum número: "));// Pegando número informado
+
+        for(i = 1; i <= numeroInformado; i++){ //For que começa em 1 e vai até o o número informado 
+                console.log( "Tabuada do ${i}");
+            for(j = 1; j <= 10; j++){//For que começa na tabuada multiplicando por um e termina multiplicando em dez
+                console.log(i + " x " + j + ' = ' + (i * j));
+            }
+        }
+
+        //${} -- não tá dando certo T-T
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
