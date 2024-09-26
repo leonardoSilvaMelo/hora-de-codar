@@ -7,16 +7,28 @@
 
     <script>
         //11 - Escreva um programa em que o usuário informe 10 valores e escreva
-        // quantos desses valores lidos estão entre os números 24 e 42 
+        //quantos desses valores lidos estão entre os números 24 e 42 
         //(incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.
 
-        let numerosInformados = [];
+        let dentroIntervalo = [];
+        let foraIntervalo = [];
 
         for(i = 0; i < 10; i++){
             let valor = parseFloat(prompt("Digite um número: " + (i + 1) + "/10"));
-            numerosInformados.push(valor);
-        }  
-    </script>
+
+            if(isNaN(valor)){
+                alert("Você digitou um valor inválido. Por favor, digite um número");
+                i--;
+            }else if( (valor  >= 24) && (valor <= 42) ){
+                dentroIntervalo += valor;
+            }else{
+                foraIntervalo += valor;
+            }
+        }   
+
+        console.log(" Valores no intervalo de 24 e 42: " + dentroIntervalo + "e valores fora desse intervalo:   " + foraIntervalo);
+
+        </script>
 </head>
 <body>
     
