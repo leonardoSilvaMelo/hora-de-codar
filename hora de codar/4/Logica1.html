@@ -10,16 +10,14 @@
          e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade
          de estudantes cadastrados e a lista com cada um deles.*/
 
-         let estudantes = [];
+         let listaEstudantes = [];
 
          while(true){
-            let nomes = parseFloat(prompt("Digite o nome do estudante \n" + "(escreva Pare quando quiser encerrar o programa)"));
-            if(nomes != String){
-                alert("Digite apenas nomes");
-            }
-            estudantes += nomes;
+            let nomes = prompt("Digite o nome do estudante \n(escreva PARE quando quiser encerrar o programa)").toUpperCase();
 
-            if()
+            if(nomes === "PARE"){
+                false
+            }
         }
     </script>
 </head>
