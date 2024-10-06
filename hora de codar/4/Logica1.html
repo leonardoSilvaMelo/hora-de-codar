@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,16 @@
          e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade
          de estudantes cadastrados e a lista com cada um deles.*/
 
-         let estudantes = [];
+        let estudantes = [];
 
-         while(true){
-            let nomes = parseFloat(prompt("Digite o nome do estudante \n" + "(escreva Pare quando quiser encerrar o programa)"));
-            if(nomes != String){
-                alert("Digite apenas nomes");
-            }
+        while (true) {
+            let nomes = prompt("Digite o nome do estudante \n" + "(escreva PARE quando quiser encerrar o programa)").toLocaleUpperCase(nomes);
+            // if (nomes != String) {
+            //     alert("Digite apenas nomes");
+            // }
             estudantes += nomes;
-
-            if()
         }
     </script>
 </head>
 <body>
-    
 </body>
-</html>
