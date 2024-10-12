@@ -14,12 +14,21 @@
         let estudantes = [];
 
         while (true) {
-            let nomes = prompt("Digite o nome do estudante \n" + "(escreva PARE quando quiser encerrar o programa)").toLocaleUpperCase(nomes);
-            // if (nomes != String) {
-            //     alert("Digite apenas nomes");
-            // }
-            estudantes += nomes;
+            let nomes = prompt("Digite o nome do estudante \n" + "(escreva PARE quando quiser encerrar o programa)").toUpperCase();
+
+            if(nomes ==="PARE"){
+                break;
+            }else if(isNaN(nomes)){
+                estudantes.push(nomes);
+            }else{
+                alert('Digite apenas letras');
+            }  
         }
+        let numerosEstudantes = estudantes.length;
+        console.log('O número de estudantes é ' + numerosEstudantes );
+        console.log('Lista de estudantes: ' + estudantes.join('\n'));
+
+
     </script>
 </head>
 <body>
