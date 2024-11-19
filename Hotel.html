@@ -3,7 +3,36 @@
 <head>
 
 	<script>
-	
+
+		const nomeHotel = "Hotel do Zé";
+
+		const senha = 2678;
+
+		alert("Bem vindo ao " + nomeHotel);
+
+		function perguntaNome(){
+
+			let nomeUsuário = prompt("Digite seu nome de Usuário: ");
+
+			if(isNaN(nomeUsuário)){
+				perguntaSenha();
+			}else{
+				alert("Digite apenas letras");
+				perguntaNome();
+			}
+		}
+
+		function perguntaSenha(){
+
+			let perguntaSenha = prompt("Digite a senha: (2678)");
+
+			if(isNaN(perguntaSenha) || perguntaSenha === ''){
+				alert("Por favor, Digite apenas números");
+				perguntaSenha();
+			}else{
+				inicio();
+			}
+		}
 
 		function inicio() {
 
@@ -23,17 +52,17 @@
 		}		
 
 		function reserva_quartos() {
-			alert('HOTEL {NOME DO HOTEL} - RESERVA DE QUARTOS');
+			alert(nomeHotel +' - RESERVA DE QUARTOS');
 			inicio();
 		}
 
 		function cadastro_hospedes() {
-			alert('HOTEL {NOME DO HOTEL} - CADASTRO DE HÓSPEDES');
+			alert(nomeHotel +' - CADASTRO DE HÓSPEDES');
 			inicio();
 		}
 
 		function abastecer_carros() {
-			alert('HOTEL {NOME DO HOTEL} - ABASTECER');
+			alert(nomeHotel +' - ABASTECER');
 			inicio();
 		}
 
@@ -53,7 +82,7 @@
 
 		
 		
-		inicio();
+		perguntaNome();
 	</script>
 </head>
 
