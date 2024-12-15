@@ -8,13 +8,13 @@
 
 		const senha = 2678;
 
-		alert("Bem vindo ao " + nomeHotel);
+		let nomeUsuario;
 
 		function perguntaNome(){
 
-			let nomeUsuário = prompt("Digite seu nome de Usuário: ");
+			nomeUsuario = prompt("Digite seu nome de Usuário: ");
 
-			if(isNaN(nomeUsuário)){
+			if(isNaN(nomeUsuario)){
 				perguntaSenha();
 			}else{
 				alert("Digite apenas letras");
@@ -24,9 +24,9 @@
 
 		function perguntaSenha(){
 
-			let perguntaSenha = prompt("Digite a senha: (2678)");
+			let respostaSenha = prompt("Digite a senha: (2678)");
 
-			if(isNaN(perguntaSenha) || perguntaSenha === ''){
+			if(isNaN(respostaSenha) || respostaSenha === ''){
 				alert("Por favor, Digite apenas números");
 				perguntaSenha();
 			}else{
@@ -36,24 +36,54 @@
 
 		function inicio() {
 
+			alert(`Bem vindo ao ${nomeHotel}, ${nomeUsuario}. É um imenso prazer ter você por aqui!`);
+
+
 			var escolha = parseInt(prompt('Selecione uma opção 1.) Reserva de Quartos 2.) Cadastro de Hóspedes 3.) Abastecimento de Carros 4.) Sair'));
 
-			if (escolha === 1) {
-				reserva_quartos();
-			} else if (escolha === 2) {
-				cadastro_hospedes();
-			} else if (escolha === 3) {
-				abastecer_carros();
-			} else if (escolha === 4) {
-				sair();
-			} else {
-				erro();
+
+			switch(escolha){
+				case 1:
+					reserva_quartos();
+					break;
+
+				case 2:
+					cadastro_hospedes();
+					break;
+
+				case 3:
+					abastecer_carros();
+					break;
+				
+				default:
+					sair();
 			}
 		}		
 
 		function reserva_quartos() {
+
 			alert(nomeHotel +' - RESERVA DE QUARTOS');
-			inicio();
+
+			const quartos = 20;
+
+			const diariaHotel = prompt("Qual o valor padrão da diária?");
+			if(diariaHotel <= 0){
+				alert(`Valor invalido`);
+				inicio();
+			}
+
+			const quantidadeDias = prompt("Quantas diarias serão necessárias?");
+			if(quantidadeDias <= 0 || quantidadeDias > 30){
+				alert(`Valor invalido`);
+				inicio();
+			}
+
+			const valorHotel = diariaHotel * quantidadeDias;
+			alert(`O valor de ${quantidadeDias} dias de hospedagem é de R$${valorHotel}`);
+
+			let nomeHospede = prompt("Qual o nome do hóspede?");
+
+			let reservaQuarto = prompt("Qual o quarto para reserva? (1-20)");
 		}
 
 		function cadastro_hospedes() {
@@ -74,6 +104,7 @@
 		function sair() {
 			var confirma = confirm('Você deseja sair?');
 			if (confirma) {
+				alert(`Muito obrigado e até logo, ${nomeUsuario}.`)
 				window.close();
 			} else {
 				inicio();
