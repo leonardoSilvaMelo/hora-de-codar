@@ -59,7 +59,7 @@
 
 				default:
 					alert("Opção não encontrada!");
-				    inicio();
+					inicio();
 			}
 		}
 
@@ -67,21 +67,22 @@
 
 			alert(nomeHotel + ' - RESERVA DE QUARTOS');
 
-			while(true){
+			let diariaHotel;
+			let quantidadeDias;
 
-				let diariaHotel = prompt("Qual o valor padrão da diária?");
+			while (true) {
+				diariaHotel = prompt("Qual o valor padrão da diária?");
 
-				if(diariaHotel > 0 && !isNaN(diariaHotel)){
+				if (diariaHotel > 0 && !isNaN(diariaHotel)) {
 					break;
 				}
 				alert(`Valor invalido`);
 			}
 
-			while(true){
+			while (true) {
+				quantidadeDias = prompt("Quantas diarias serão necessárias?");
 
-				let quantidadeDias = prompt("Quantas diarias serão necessárias?");
-
-				if(quantidadeDias > 0 && !isNaN(quantidadeDias)){
+				if (quantidadeDias > 0 && !isNaN(quantidadeDias)) {
 					break;
 				}
 				alert("Valor invalido");
@@ -91,14 +92,40 @@
 
 			alert(`O valor de ${quantidadeDias} dias de hospedagem é de R$${valorHotel}`);
 
-			let nomeHospede = prompt("Qual o nome do hóspede?");
+			let nomeHospede;
+			while(true){
+				nomeHospede = prompt("Qual o nome do hóspede?");
 
+				if(isNaN(nomeHospede)){
+					break;
+				}
+				alert("Digite apenas letras");
+			}
 
-			let quartos = Array(20).fill(vazio);
+			//=======QUARTOS=======
+			let quartos = Array(20).fill("vazio");
 
-			console.log(quartos);
+			let reservarQuarto;
 
-			let reservarQuarto = prompt("Qual o quarto para reserva? (1-20)");
+			while (true) {
+				reservarQuarto = prompt(`Qual o quarto para reserva de ${nomeHospede}? (1-20)`);
+
+				if (reservarQuarto >= 1 && reservarQuarto <= 20) {
+					if (quartos[reservarQuarto - 1] === "vazio") {
+						quartos[reservarQuarto - 1] = nomeHospede;
+
+						alert(`Quarto ${reservarQuarto} reservado para: ${nomeHospede}`);
+						break;
+					}
+					alert(`O quarto ${reservarQuarto} já está ocupado por ${quartos[reservarQuarto - 1]}.`);
+
+				}
+				alert("Valor inválido");
+			}
+
+			quartos.forEach((estado, index) => {
+				console.log(`Quarto ${index + 1}: ${estado}`);
+			});
 		}
 
 
