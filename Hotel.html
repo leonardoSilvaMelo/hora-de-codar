@@ -10,26 +10,26 @@
 
 		let nomeUsuario;
 
-		function perguntaNome(){
+		function perguntaNome() {
 
 			nomeUsuario = prompt("Digite seu nome de Usuário: ");
 
-			if(isNaN(nomeUsuario)){
+			if (isNaN(nomeUsuario)) {
 				perguntaSenha();
-			}else{
+			} else {
 				alert("Digite apenas letras");
 				perguntaNome();
 			}
 		}
 
-		function perguntaSenha(){
+		function perguntaSenha() {
 
 			let respostaSenha = prompt("Digite a senha: (2678)");
 
-			if(isNaN(respostaSenha) || respostaSenha === ''){
-				alert("Por favor, Digite apenas números");
+			if (isNaN(respostaSenha) || respostaSenha === '' || respostaSenha != senha) {
+				alert("Por favor, Digite a senha correta");
 				perguntaSenha();
-			}else{
+			} else {
 				inicio();
 			}
 		}
@@ -38,11 +38,9 @@
 
 			alert(`Bem vindo ao ${nomeHotel}, ${nomeUsuario}. É um imenso prazer ter você por aqui!`);
 
+			var escolha = parseInt(prompt('Selecione uma opção: \n 1.) Reserva de Quartos \n 2.) Cadastro de Hóspedes \n 3.) Abastecimento de Carros \n 4.) Sair'));
 
-			var escolha = parseInt(prompt('Selecione uma opção 1.) Reserva de Quartos 2.) Cadastro de Hóspedes 3.) Abastecimento de Carros 4.) Sair'));
-
-
-			switch(escolha){
+			switch (escolha) {
 				case 1:
 					reserva_quartos();
 					break;
@@ -54,45 +52,89 @@
 				case 3:
 					abastecer_carros();
 					break;
-				
-				default:
+
+				case 4:
 					sair();
+					break;
+
+				default:
+					alert("Opção não encontrada!");
+				    inicio();
 			}
-		}		
+		}
 
 		function reserva_quartos() {
 
-			alert(nomeHotel +' - RESERVA DE QUARTOS');
+			alert(nomeHotel + ' - RESERVA DE QUARTOS');
 
-			const quartos = 20;
+			while(true){
 
-			const diariaHotel = prompt("Qual o valor padrão da diária?");
-			if(diariaHotel <= 0){
+				let diariaHotel = prompt("Qual o valor padrão da diária?");
+
+				if(diariaHotel > 0 && !isNaN(diariaHotel)){
+					break;
+				}
 				alert(`Valor invalido`);
-				inicio();
 			}
 
-			const quantidadeDias = prompt("Quantas diarias serão necessárias?");
-			if(quantidadeDias <= 0 || quantidadeDias > 30){
-				alert(`Valor invalido`);
-				inicio();
+			while(true){
+
+				let quantidadeDias = prompt("Quantas diarias serão necessárias?");
+
+				if(quantidadeDias > 0 && !isNaN(quantidadeDias)){
+					break;
+				}
+				alert("Valor invalido");
 			}
 
 			const valorHotel = diariaHotel * quantidadeDias;
+
 			alert(`O valor de ${quantidadeDias} dias de hospedagem é de R$${valorHotel}`);
 
 			let nomeHospede = prompt("Qual o nome do hóspede?");
 
-			let reservaQuarto = prompt("Qual o quarto para reserva? (1-20)");
+
+			let quartos = Array(20).fill(vazio);
+
+			console.log(quartos);
+
+			let reservarQuarto = prompt("Qual o quarto para reserva? (1-20)");
 		}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		function cadastro_hospedes() {
-			alert(nomeHotel +' - CADASTRO DE HÓSPEDES');
+			alert(nomeHotel + ' - CADASTRO DE HÓSPEDES');
 			inicio();
 		}
 
 		function abastecer_carros() {
-			alert(nomeHotel +' - ABASTECER');
+			alert(nomeHotel + ' - ABASTECER');
 			inicio();
 		}
 
@@ -111,8 +153,8 @@
 			}
 		}
 
-		
-		
+
+
 		perguntaNome();
 	</script>
 </head>
